@@ -21,9 +21,9 @@ class Colors:
 
 class Localizer:
     def __init__(self, reference_path, working_path):
-        self.reference_dict = dict()
-        self.working_dict = dict()
-        self.out_dict = dict()
+        self.reference_dict = {}
+        self.working_dict = {}
+        self.out_dict = {}
         self.reference_path = reference_path
         self.working_path = working_path
         self.init_dicts()
@@ -45,7 +45,7 @@ class Localizer:
                 return (working_dict, True)
             if isinstance(value, dict):
                 if key not in working_dict:
-                    working_dict[key] = dict()
+                    working_dict[key] = {}
                 working_dict[key], done = self.update_values(
                     value, working_dict[key])
             elif key not in working_dict:
